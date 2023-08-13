@@ -12,5 +12,5 @@ always @ (posedge CLK)
   if(!nLb) //When nLb is low and a pos CLK edge loads the word from the W bus into Register B
     bout = bin;
   end
-// add 8 bits going into adder/subtractor
+
 endmodule
