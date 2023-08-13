@@ -12,20 +12,24 @@ always @ (posedge CLK)
   begin 
     if(prog) 
       begin
-      {nrd, nwr} = 1;     //make nrd enabled and nwr disabled b/c in run mode ram become ROM
+        {nrd, nwr} = 1;     //make nrd enabled and nwr disabled b/c in run mode RAM become ROM
     
-    if(!nLm) addr = in;    
+    if(!nLm) 
+      addr = in;    
     
-    else addr <= addr;
+    else 
+      addr <= addr;
     end
 
     else 
       begin
         {nrd, nwr} = 2;
   
-    if(!nLm) addr = in;    //make nrd enabled and nwr disabled b/c in run mode
+    if(!nLm) 
+      addr = in;    //make nrd enabled and nwr disabled b/c in run mode
    
-    else addr <= addr;
+    else
+      addr <= addr;
     end
   end
 
