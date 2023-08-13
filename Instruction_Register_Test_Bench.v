@@ -18,7 +18,7 @@ module Instruction_Register_Test_Bench();
     nLi = 1;
     nEi = 0;
     CLR = 1;
-    wbus = 8'd0;
+    wbus = 8'b00000000;
         
    //Reset register
    #10 CLR = 0;
@@ -26,21 +26,21 @@ module Instruction_Register_Test_Bench();
    
    //Loading data into Register
    #10 nLi = 0;
-   wbus = 8'd2; // Input data
+   wbus = 8'b00000010; // Input data
    #10 nLi = 1;
    #10 nEi = 1;
    #10 CLR = 0;
    #10 CLR = 1;
    #10 nLi = 0;
-   wbus = 8'd4; // Input data
+   wbus = 8'b00000100; // Input data
    #10 nLi = 1; 
    
    // Simulate data output to Controller/Sequencer
    #10 nEi = 0;
    #10 nLi = 0;
-   wbus = 8'd8; // Input data
+   wbus = 8'b00001000; // Input data
    #10 nEi = 1;
-   wbus = 8'd16; // Input data
+   wbus = 8'b00010000; // Input data
    $stop;
  
   end
