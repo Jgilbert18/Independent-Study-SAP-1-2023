@@ -9,7 +9,7 @@ reg [7:0] display;  //Registers to hold the data being sent to the Binary Displa
 always @ (posedge CLK)
 
 begin 
-  if(!nLo) //When nLo is low the next CLK edge loads the accumulator word into the output register
+  if(!nLo) //When nLo is low the next pos CLK edge loads the accumulator word into the output register
     display = orin;
   end
   
