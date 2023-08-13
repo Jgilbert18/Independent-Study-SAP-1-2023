@@ -1,5 +1,5 @@
 module InputMAR (nLm, CLK, in, addr, nrd, nwr, prog);
-input CLK, nLm, prog;  //run_prog = 1 means in run mode not in programming mode
+input CLK, nLm, prog;  //prog = 1 means in run mode not in programming mode
 input [3:0] in;
 
 output nrd, nwr;
