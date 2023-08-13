@@ -16,24 +16,22 @@ module Register_B_Test_Bench();
   initial begin
     CLK = 0;
     nLb = 1;
-    bin = 0;
-    
-   //Reset register
-   #10 nLb = 0;
+    bin = 8'b00000000;
    
    //Loading data into Register B
-   #10 bin = 8'd0;
-   #10 bin = 8'd1;
-   #10 bin = 8'd2;
-   #10 bin = 8'd3;
-   #10 nLb = 1;
-   #10 bin = 8'd4;
-   #10 bin = 8'd5;
-   #10 bin = 8'd6;
    #10 nLb = 0;
-   #10 bin = 8'd7;
-   #10 bin = 8'd8;
-   #10 bin = 8'd9;
+   #10 bin = 8'b00000000;
+   #10 bin = 8'b00000001;
+   #10 bin = 8'b00000010;
+   #10 bin = 8'b00000011;
+   #10 nLb = 1;
+   #10 bin = 8'b00000100;
+   #10 bin = 8'b00000101;
+   #10 bin = 8'b00000110;
+   #10 nLb = 0;
+   #10 bin = 8'b00000111;
+   #10 bin = 8'd00001000;
+   #10 bin = 8'd00001001;
    $stop;
  
   end
