@@ -15,7 +15,7 @@ always @(posedge CLK)
       aout <= 8'bz; 
   end
   
-  if(Ea)  //When Ea is high the 8 bits appear on the the W bus
+   if(Ea)  //When Ea is high the 8 bits appear on the W bus
     begin
       aout <= atemp;  
   end
