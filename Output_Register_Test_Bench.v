@@ -16,25 +16,23 @@ module Output_Register_Test_Bench();
   initial begin
     CLK = 0;
     nLo = 1;
-    orin = 0;
-    
-   //Reset register
-   #10 nLo = 0;
+    orin = 8'b00000000;
    
    //Loading data into Register
-   #10 orin = 8'd1;
-   #10 orin = 8'd3;
-   #10 orin = 8'd5;
-   #10 orin = 8'd7;
-   #10 nLo = 1;
-   #10 orin = 8'd11;
-   #10 orin = 8'd13;
    #10 nLo = 0;
-   #10 orin = 8'd17;
+   #10 orin = 8'b00000001;
+   #10 orin = 8'b00000011;
+   #10 orin = 8'b00000101;
+   #10 orin = 8'b00000111;
    #10 nLo = 1;
-   #10 orin = 8'd19;
-   #10 orin = 8'd23;
-   #10 orin = 8'd29;
+   #10 orin = 8'b00001011;
+   #10 orin = 8'b00001101;
+   #10 nLo = 0;
+   #10 orin = 8'b00010001;
+   #10 nLo = 1;
+   #10 orin = 8'b00010011;
+   #10 orin = 8'b00010111;
+   #10 orin = 8'b00011101;
    $stop;
  
   end
